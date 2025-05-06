@@ -147,3 +147,9 @@ nano $(python3 -c "import hivemind.p2p.p2p_daemon as m; print(m.__file__)")
 ```bash
 ./run_rl_swarm.sh
 ```
+
+**Bot** : https://t.me/gensyntrackbot
+
+**Explorer** : https://gensyn-testnet.explorer.alchemy.com
+
+**Dashboard**: https://dashboard.gensyn.ai/
