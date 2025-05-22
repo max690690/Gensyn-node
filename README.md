@@ -50,6 +50,10 @@ screen -r
 
 > ⚠️ USE DIFFERENT AI MODEL TO CHECK THE AUTHENTICITY OF THE FILES.
 
+## Bot : https://t.me/gensyntrackbot
+## Explorer : https://gensyn-testnet.explorer.alchemy.com
+## Dashboard: https://dashboard.gensyn.ai/
+
 ================================================================================================================================================================================================
 
 
