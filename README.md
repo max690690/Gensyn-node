@@ -1,63 +1,67 @@
+ Gensyn Node
 
-# GENSYN INSTALLATION GUIDE BELOW
+Copy & paste command as it is 
 
-```bash
-sudo apt update
-```
-```bash
-sudo apt install -y
-```
+1. sudo apt install -y python3 python3-venv python3-pip curl screen git yarn
+2. curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+3. echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+4. sudo apt update && sudo apt install -y yarn
+5. curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash
+6. rm -rf rl-swarm && git clone https://github.com/zunxbt/rl-swarm.git && cd rl-swarm
+7. screen -S gensyn
+8. python3 -m venv .venv && source .venv/bin/activate && ./run_rl_swarm.sh
 
-```bash
-sudo apt update && sudo apt install -y python3 python3-venv python3-pip curl wget screen git lsof nano unzip iproute2
-```
+Write Y and press ENTER
+ Leave the screen Press CTRL+A+D
+y
+***************************************************************************************
+*****If local host not working open this command is new session wait for a minute you get a link open it
+in your browser & passwoed will be your vps IP address****
 
-```bash
-curl -sSL https://raw.githubusercontent.com/zunxbt/installation/main/node.sh | bash
-```
+ npm install -g localtunnel
 
-```bash
-screen -S gensyn
-```
+lt --port 3000
 
-```bash
-cd $HOME && rm -rf gensyn-testnet && git clone https://github.com/zunxbt/gensyn-testnet.git && chmod +x gensyn-testnet/gensyn.sh && ./gensyn-testnet/gensyn.sh
-```
+***************************************************************************************
 
-```bash
-nano hivemind_exp/configs/mac/grpo-qwen-2.5-0.5b-deepseek-r1.yaml
-```
 
-```bash
-cd rl-swarm
-```
 
-```bash
-RL_SWARM_UNSLOTH=False ./run_rl_swarm.sh
-```
+Write “N” for pushing Hugging face Hub
 
-```bash
+ Leave the screen Press CTRL+A+D
+
+When you see 'use_cache True setup will complete.
+save your node name
+
+
+** Math A/  parameter 1.5 **
+
+** fore recheck command:**
+
+1.cd ~/rl-swarm
+
+1.1. screen -r gensyn
+
+ rerun command:
+
+2. python3 -m venv .venv && source .venv/bin/activate && ./run_rl_swarm.sh
+
+
+backup cmd
 [ -f backup.sh ] && rm backup.sh; curl -sSL -O https://raw.githubusercontent.com/AbhiEBA/gensyn1/main/backup.sh && chmod +x backup.sh && ./backup.sh
-```
 
-```bash
-screen -ls
-```
-
-```bash
-screen -r
-```
-
-> ⚠️ USE DIFFERENT AI MODEL TO CHECK THE AUTHENTICITY OF THE FILES.
-
+****************************************************************************************************************************************
 ## Bot : https://t.me/gensyntrackbot
 ## Explorer : https://gensyn-testnet.explorer.alchemy.com
 ## Dashboard: https://dashboard.gensyn.ai/
 
-================================================================================================================================================================================================
+****************************************************************************************************************************************
 
+IF You Getting these below error follow this command....
 
-If Error is:   ""bf16"  use this below cammand 
+If Error is:   Your setup doesn't support bf16/gpu.
+
+ use this command
 
 
 1. cd rl-swarm   (if there is rl-swarm directory is not present then only)
@@ -83,7 +87,8 @@ source .venv/bin/activate
 
 ./run_rl_swarm.sh
 
-========================================================================================================================================================================================
+
+**********************************************************************************************
 
 
 **✅ Solution to the DHTNode bootstrap failed error **
@@ -146,6 +151,4 @@ Python
 
    * Press Ctrl + O, then Enter to confirm.
    * Press Ctrl + X to exit.
-5. Now restart your node — you're good to go!
-
-6. ===================================================================================================================================================================================
+5. Now restart your node — you're good to go! 
